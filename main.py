@@ -19,6 +19,10 @@ from handlers.users.kuchuk import rt as kuchuk
 from handlers.users.random_kuchuk import rt as random_kuchuk
 from handlers.users.random_mushuk import rt as random_mushuk
 from handlers.users.mushuk import rt as mushuk
+from handlers.users.private import rt as private
+from handlers.users.group import rt as group
+from handlers.users.AdminGroup import rt as AdminGroup
+from handlers.users.adminfilter import rt as adminfilter
 # from handlers.users.contact import rt as contact
 # from handlers.users.test import rt as test
 from handlers.users.animation import rt as animation
@@ -29,6 +33,10 @@ async def main():
     dp.include_router(info)
     dp.include_router(prezident)
     dp.include_router(car)
+    # dp.include_router(AdminGroup)
+    dp.include_router(group)
+    dp.include_router(private)
+    dp.include_router(adminfilter)
     # dp.include_router(formatting)
     dp.include_router(time)
     # dp.include_router(message)

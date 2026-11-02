@@ -1,5 +1,5 @@
 from aiogram import Router, types, F
-from filters.admin import AdminFilter
+from filterlar.admin import AdminFilter
 rt = Router()
 @rt.message(F.dice, AdminFilter())
 async def dice(msg: types.Message):
